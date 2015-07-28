@@ -1,0 +1,20 @@
+# $XDG_CONFIG_HOME/bash/bashrc
+
+[[ -z "$PS1" ]] && return
+source $XDG_CONFIG_HOME/bash/aliases
+source $XDG_CONFIG_HOME/bash/functions
+#source /usr/share/doc/pkgfile/command-not-found.bash
+
+shopt -s histappend checkjobs cmdhist huponexit extglob
+
+PROMPT_DIRTRIM=5
+PROMPT_COMMAND="history -a; history -c; history -r"
+PS1="\[\e[1;30m\][\[\e[1;94m\]\H\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[0;32m\] +${SHLVL}\[\e[1;30m\]]\[\e[1;34m\] >> \[\e[0;37m\]"
+INPUTRC=$XDG_CONFIG_HOME/bash/inputrc
+eval $(dircolors $XDG_CONFIG_HOME/termite/dircolors)
+
+HISTFILE=$XDG_CONFIG_HOME/bash/histfile
+HISTIGNORE="&:l:l[sla]:[bf]g:exit"
+HISTCONTROL=ignoredups:erasedups
+HISTFILESIZE=10000
+HISTSIZE=10000

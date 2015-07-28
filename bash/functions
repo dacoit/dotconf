@@ -1,0 +1,13 @@
+# $XDG_CONFIG_HOME/bash/functions
+
+mpx () {
+    (mpv "$(xsel -bo)" &>/dev/null & disown)
+}
+
+mpw () {
+    (mpv "$@" &>/dev/null & disown)
+}
+
+pb () {
+    curl -F "c=@${1:--}" https://ptpb.pw/
+}
