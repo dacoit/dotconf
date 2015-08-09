@@ -1,5 +1,4 @@
-# dotconf
-<p>$HOME/devel/dotconf/
+$HOME/devel/dotconf/
 ├── bash
 │   ├── bash_profile
 │   ├── bashrc
@@ -19,6 +18,6 @@
     ├── xinitrc.d
     │   ├── 00-xsession.sh
     │   └── 99-exec-wm.sh
-    └── Xresources</p>
+    └── Xresources
 
-<p>4 directories, 16 files</p>
+ directories, 16 files
