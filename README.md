@@ -1,5 +1,6 @@
 # dotconf
-<p>$HOME/devel/dotconf/
+```
+$HOME/devel/dotconf/
 ├── bash
 │   ├── bash_profile
 │   ├── bashrc
@@ -21,4 +22,5 @@
     │   └── 99-exec-wm.sh
     └── Xresources</p>
 
-<p>4 directories, 16 files</p>
+4 directories, 16 files
+```
