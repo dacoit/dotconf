@@ -6,5 +6,5 @@ case "$WM" in
         exec "$WM" > "$XDG_CACHE_HOME"/"$WM"-runtime.log 2>&1
         ;;
     *)
-        "$WM"
+        return
 esac
