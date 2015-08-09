@@ -1,3 +1,5 @@
+# XDG_CONFIG_HOME/profile
+
 # XDG Basedir Specification Paths
 export PATH=~/.local/bin:$PATH
 export XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
@@ -17,9 +19,8 @@ export ELINKS_CONFDIR=$XDG_CONFIG_HOME/elinks
 export GTK_RC_FILES=$XDG_CONFIG_HOME/gtk-1.0/gtkrc
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
 export BEEP=/usr/share/sounds/freedesktop/stereo/window-attention.oga
-export VISUAL=vim
-export EDITOR=vim
-export SUDO_EDITOR=rvim
+export VISUAL=vis
+export EDITOR=vis
 export TERMINAL=termite
 export BROWSER=elinks
 export FT2_SUBPIXEL_HINTING=1
