@@ -1,5 +1,5 @@
 #!/bin/bash
-#XDG_CONFIG_HOME/X11/xsession
+#XDG_CONFIG_HOME/X11/xinitrc.d/00-xsession.sh
 
 [[ -f $XDG_CONFIG_HOME/X11/Xresources ]] && xrdb "$XDG_CONFIG_HOME"/X11/Xresources
 
