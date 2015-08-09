@@ -1,0 +1,7 @@
+# XDG_CONFIG_HOME/bash/bashrc.d/hist
+
+HISTFILE="$XDG_CONFIG_HOME"/bash/histfile
+HISTIGNORE="&:l:l[sla]:[bf]g:exit"
+HISTCONTROL="ignoredups:erasedups"
+HISTFILESIZE=10000
+HISTSIZE=10000

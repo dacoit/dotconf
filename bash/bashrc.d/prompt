@@ -1,0 +1,7 @@
+# XDG_CONFIG_HOME/bash/bashrc.d/prompt
+
+PROMPT_DIRTRIM=5
+PROMPT_COMMAND="history -a; history -c; history -r"
+PS1="\[\e[1;30m\][\[\e[1;94m\]\H\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[0;32m\] \
++${SHLVL}\[\e[1;30m\]]\[\e[1;34m\] \
+>> \[\e[0;37m\]"

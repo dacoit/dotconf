@@ -1,0 +1,15 @@
+# XDG_CONFIG_HOME/bash/bash_profile
+
+# Single hardcode
+source $HOME/.config/profile
+
+umask 0022
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 && -z $TMUX ]] && {
+    sudo brightness chmod
+    export BROWSER=chromium
+    export WM=i3
+    exec startx "$XDG_CONFIG_HOME"/X11/xinitrc
+}
+
+[[ -e "$XDG_CONFIG_HOME"/bash/bashrc ]] && source "$XDG_CONFIG_HOME"/bash/bashrc

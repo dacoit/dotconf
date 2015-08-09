@@ -1,0 +1,5 @@
+# XDG_CONFIG_HOME/bash/bashrc.d/pkgfile
+
+[[ -f /usr/share/doc/pkgfile/command-not-found.bash ]] && {
+    source /usr/share/doc/pkgfile/command-not-found.bash
+}

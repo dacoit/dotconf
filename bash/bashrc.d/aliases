@@ -1,0 +1,31 @@
+# XDG_CONFIG_HOME/bash/bashrc.d/aliases
+
+# Force use of XDG Basedir Spec
+alias mutt="mutt -F $XDG_CONFIG_HOME/mutt/muttrc"
+alias xsel="xsel --logfile $XDG_CACHE_HOME/xsel.log"
+alias ncmpcpp="ncmpcpp --config $XDG_CONFIG_HOME/ncmpcpp/config"
+
+# sudo alias completion hack https://askubuntu.com/a/22043
+alias sudo="sudo "
+
+# --color
+alias cower="cower --color=auto"
+alias ls="ls --color=auto"
+
+# Customized
+alias vi="vim"
+
+alias ls="ls -A"
+alias l="ls -l"
+alias ll="l"
+
+alias df="df -hT"
+alias du="du -h"
+alias ":q"="exit"
+
+alias pg="ping -c 2 google.com"
+alias dg="drill google.com"
+
+alias netflix="chromium --app='https://www.netflix.com/WiHome'"
+alias reflector-gen="reflector	--protocol http --latest 200 --sort rate --save /etc/pacman.d/mirrorlist --verbose"
+alias extip="curl http://ipecho.net/plain; echo"

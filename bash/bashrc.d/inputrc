@@ -1,0 +1,3 @@
+# XDG_CONFIG_HOME/bash/bashrc/inputrc
+
+INPUTRC="$XDG_CONFIG_HOME"/bash/inputrc

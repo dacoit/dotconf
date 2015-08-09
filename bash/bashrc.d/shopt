@@ -1,0 +1,3 @@
+# XDG_CONFIG_HOME/bash/bashrc.d/shopt
+
+shopt -s histappend checkjobs cmdhist huponexit extglob
