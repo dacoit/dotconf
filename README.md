@@ -20,7 +20,7 @@ $HOME/devel/dotconf/
     ├── xinitrc.d
     │   ├── 00-xsession.sh
     │   └── 99-exec-wm.sh
-    └── Xresources</p>
+    └── Xresources
 
 4 directories, 16 files
 ```
