@@ -12,14 +12,14 @@
 │   │   └── shopt
 │   └── inputrc
 ├── mutt
-│   ├── colors
-│   ├── gmail.conf
-│   ├── gmail.mailboxes
-│   ├── gpg.rc
-│   ├── mailcap
-│   └── muttrc
+│   ├── muttrc
+│   └── muttrc.d
+│       ├── colors
+│       ├── gmail.conf
+│       ├── gmail.mailboxes
+│       ├── gpg.rc
+│       └── mailcap
 ├── profile
-├── README.md
 ├── README.txt
 └── X11
     ├── xinitrc
@@ -28,4 +28,4 @@
     │   └── 99-exec-wm.sh
     └── Xresources
 
-5 directories, 23 files
+6 directories, 22 files
