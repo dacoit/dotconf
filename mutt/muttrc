@@ -1,7 +1,6 @@
 ## General
-source                  $XDG_CONFIG_HOME/mutt/gmail.conf
-source                  $XDG_CONFIG_HOME/mutt/gmail.mailboxes
-set folder              = "~/Mail/$imap_user/"
+source                  $XDG_CONFIG_HOME/mutt/muttrc.d/gmail.conf
+source                  $XDG_CONFIG_HOME/mutt/muttrc.d/gmail.mailboxes
 
 ## SMTP
 set smtp_url            = smtp://$imap_user:$imap_pass@smtp.gmail.com:587
@@ -9,16 +8,16 @@ set from                = $imap_user
 set use_from            = yes
 
 ## Mutt Settings
-source  $XDG_CONFIG_HOME/mutt/colors
+source  $XDG_CONFIG_HOME/mutt/muttrc.d/colors
 set     header_cache        = $XDG_CACHE_HOME/mutt/cache
 set     message_cachedir    = $XDG_CACHE_HOME/mutt/cache
 
-set     mailcap_path        = $XDG_CONFIG_HOME/mutt/mailcap
+set     mailcap_path        = $XDG_CONFIG_HOME/mutt/muttrc.d/mailcap
 alternative_order text/html text/enriched text/plain
 unset   implicit_autoview
 auto_view text/html
 
-source $XDG_CONFIG_HOME/mutt/gpg.rc
+source $XDG_CONFIG_HOME/mutt/muttrc.d/gpg.rc
 
 ###  Calomel.org .muttrc
 
