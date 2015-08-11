@@ -1,0 +1,91 @@
+## General
+source                  $XDG_CONFIG_HOME/mutt/gmail.conf
+source                  $XDG_CONFIG_HOME/mutt/gmail.mailboxes
+set folder              = "~/Mail/$imap_user/"
+
+## SMTP
+set smtp_url            = smtp://$imap_user:$imap_pass@smtp.gmail.com:587
+set from                = $imap_user
+set use_from            = yes
+
+## Mutt Settings
+source  $XDG_CONFIG_HOME/mutt/colors
+set     header_cache        = $XDG_CACHE_HOME/mutt/cache
+set     message_cachedir    = $XDG_CACHE_HOME/mutt/cache
+
+set     mailcap_path        = $XDG_CONFIG_HOME/mutt/mailcap
+alternative_order text/html text/enriched text/plain
+unset   implicit_autoview
+auto_view text/html
+
+source $XDG_CONFIG_HOME/mutt/gpg.rc
+
+###  Calomel.org .muttrc
+
+## Pager
+ignore *
+unignore  X-Bogosity From: Reply-To: To: Cc: Date: Subject:
+hdr_order X-Bogosity From: Reply-To: To: Cc: Date: Subject:
+
+# Sidebar
+set     sidebar_visible = yes
+set     sidebar_width = 30
+set     sidebar_delim='|'
+macro   index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro   pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
+## Macros
+macro generic "<f8>" "<shell-escape>mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc $imap_user<enter>"
+macro index "<f8>" "<shell-escape>mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc $imap_user<enter>"
+macro pager "<f8>" "<shell-escape>mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc $imap_user<enter>"
+
+# headers
+my_hdr From: $imap_user (Suvrat Rao)
+my_hdr Errors-To: $imap_user
+
+set     status_format="-%r-Mutt : %f --------[Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]-%>-----%h-(%P)"
+unset   abort_unmodified
+set     autoedit
+set     beep
+set     beep_new
+unset   bounce_delivered
+set     check_new
+set     delete
+set     editor = "vim -c 'set textwidth=77' -c 'map  gqap' -c 'map  :50d 9999'"
+set     envelope_from
+set     fast_reply
+unset   fcc_attach
+set     forward_decode
+set     forward_format="Fwd: %s"
+set     help
+set     mail_check=5
+unset   mark_old
+set     menu_scroll
+set     mime_forward=no
+set     mime_forward_decode
+set     mime_forward_rest
+set     pager="builtin"
+set     pager_format=""
+set     pager_index_lines=10
+set     pager_stop
+set     print=ask-no
+set     read_inc=2
+unset   reply_self
+set     reply_to
+unset   sig_dashes
+set     sig_on_top
+set     smart_wrap
+set     sort_aux=reverse-date-received       
+set     sort=threads
+set     sort_re
+set     status_on_top
+unset   strict_threads
+unset   suspend
+set     tilde
+set     timeout=5
+set     thorough_search
+unset   user_agent
+unset   wait_key

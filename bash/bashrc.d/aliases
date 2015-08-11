@@ -10,12 +10,11 @@ alias sudo="sudo "
 
 # --color
 alias cower="cower --color=auto"
-alias ls="ls --color=auto"
+alias ls="ls -A --color=auto"
 
 # Customized
 alias vi="vim"
 
-alias ls="ls -A"
 alias l="ls -l"
 alias ll="l"
 
