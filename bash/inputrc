@@ -18,5 +18,4 @@ Tab:complete
 "\e[Z":menu-complete
 
 "\e\C-l":"\C-e | less\C-m"		# append '| less'
-"\e\C-y":"\C-ayes | \C-m"		# prepend 'yes |'
 "\es":"\C-asudo \C-e"			# prepend 'sudo'

@@ -3,12 +3,10 @@
 mpw () {
     case "$1" in
         cb)
-            shift
-            (mpv "$(xsel -bo)" "$@" &>/dev/null & disown)
+            (mpv "$(xsel -bo)" "${@:2}" &>/dev/null & disown)
             ;;
         pb)
-            shift
-            (mpv "$(xsel -po)" "$@" &>/dev/null & disown)
+            (mpv "$(xsel -po)" "${@:2}" &>/dev/null & disown)
             ;;
         *)
             (mpv "$@" &>/dev/null & disown)
