@@ -1,11 +1,5 @@
 ## General
 source                  $XDG_CONFIG_HOME/mutt/muttrc.d/gmail.conf
-source                  $XDG_CONFIG_HOME/mutt/muttrc.d/gmail.mailboxes
-
-## SMTP
-set smtp_url            = smtp://$imap_user:$imap_pass@smtp.gmail.com:587
-set from                = $imap_user
-set use_from            = yes
 
 ## Mutt Settings
 source  $XDG_CONFIG_HOME/mutt/muttrc.d/colors
@@ -37,9 +31,11 @@ bind index,pager \CN sidebar-next
 bind index,pager \CO sidebar-open
 
 ## Macros
-macro generic "<f8>" "<shell-escape>mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc $imap_user<enter>"
 macro index "<f8>" "<shell-escape>mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc $imap_user<enter>"
+macro generic "<f8>" "<shell-escape>mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc $imap_user<enter>"
 macro pager "<f8>" "<shell-escape>mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc $imap_user<enter>"
+macro index "<f7>" "<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/muttrc.d/gmail.conf<enter><change-folder>!<enter>"
+macro index "<f9>" "<sync-mailbox><enter-command>source $XDG_CONFIG_HOME/mutt/muttrc.d/edu1.conf<enter><change-folder>!<enter>"
 
 # headers
 my_hdr From: $imap_user ($realname)

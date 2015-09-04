@@ -2,7 +2,7 @@
 
 [[ -d $XDG_CONFIG_HOME/bash/bashrc.d ]] && {
     for f in "$XDG_CONFIG_HOME"/bash/bashrc.d/*; do
-        [[ -e "$f" ]] && source "$f"
+        source "$f"
     done
     unset f
 }
